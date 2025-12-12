@@ -10,7 +10,7 @@ function evenGame(userName) {
         const isEven = randomInt % 2 === 0;
         const correctAnswer = isEven ? 'yes' : 'no';
         
-        // Заменяем prompt на readlineSync.question
+        
         const answer = readlineSync.question(`Is ${randomInt} even? Answer "yes" or "no": `).toLowerCase();
         console.log(`Your answer: ${answer}`);
 
