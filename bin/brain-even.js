@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function evenGame(userName) {
+function evenGame(userName = undefined) {
     let correctAnswers = 0;
     const requiredCorrect = 3;
     
@@ -26,4 +26,5 @@ function evenGame(userName) {
     console.log(`Congratulations, ${userName}!`);
 }
 
+evenGame()
 export { evenGame };
