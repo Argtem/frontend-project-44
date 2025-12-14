@@ -28,5 +28,4 @@ function evenGame(user= undefined) {
     }
 }
 
-evenGame()
-export { evenGame };
+export {evenGame};

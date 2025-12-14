@@ -36,4 +36,4 @@ function gcd(user = undefined) {
 
     }
 }
-gcd()
+export {gcd};

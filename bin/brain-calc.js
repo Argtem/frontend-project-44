@@ -53,4 +53,5 @@ function calcGame(user = undefined) {
         }
     }
 }
-calcGame()
+
+export {calcGame}
