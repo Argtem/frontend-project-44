@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function evenGame(userName = undefined) {
+function evenGame(user= undefined) {
     let correctAnswers = 0;
     const requiredCorrect = 3;
     
@@ -17,13 +17,15 @@ function evenGame(userName = undefined) {
         if (answer === correctAnswer) {
             console.log("Correct!");
             correctAnswers++;
+            if (correctAnswers == requiredCorrect) {
+                    console.log(`Congratulations, ${user}!`)
+                }
         } else {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-            console.log(`Let's try again, ${userName}!`);
-            correctAnswers= 0
+            console.log(`Let's try again, ${user}!`);
+            break
         }
     }
-    console.log(`Congratulations, ${userName}!`);
 }
 
 evenGame()
