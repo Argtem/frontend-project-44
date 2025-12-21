@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+import { sayYourName } from '../src/cli.js'
 import readlineSync from 'readline-sync';
 function calculateGCD(a, b) {
     a = Math.abs(a);
@@ -12,7 +14,7 @@ function calculateGCD(a, b) {
 }
 
 
-function gcd(user = undefined) {
+function gcd(user = sayYourName()) {
     const correctNeeded = 3
     let correct = 0
 
