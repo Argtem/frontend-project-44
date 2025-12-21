@@ -22,7 +22,7 @@ function evenGame(user = sayYourName()) {
         console.log(`Congratulations, ${user}!`)
       }
     }
-     else {
+    else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`)
       console.log(`Let's try again, ${user}!`)
       break
