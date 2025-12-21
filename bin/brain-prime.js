@@ -46,4 +46,4 @@ function primeGame(user = sayYourName()) {
 }
 
 
-export {primeGame};
+primeGame()
