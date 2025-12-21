@@ -20,11 +20,13 @@ function calcGame(user = sayYourName()) {
         if (correct === need) {
           console.log(`Congratulations, ${user}!`)
         }
-      } else {
+      }
+    else {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
         break
       }
-    } else if (sign === 2) {
+    }
+    else if (sign === 2) {
       const correctAnswer = a - b
       const answer = readlineSync.question(`Question: ${a} - ${b}`)
       console.log(`Your answer: ${answer}`)
@@ -34,7 +36,8 @@ function calcGame(user = sayYourName()) {
         if (correct === need) {
           console.log(`Congratulations, ${user}!`)
         }
-      } else {
+      }
+       else {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
         break
       }
@@ -48,7 +51,8 @@ function calcGame(user = sayYourName()) {
         if (correct === need) {
           console.log(`Congratulations, ${user}!`)
         }
-      } else {
+      }
+       else {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
         break
       }
