@@ -42,7 +42,8 @@ function progressionGame(user = sayYourName()) {
         console.log(`Congratulations, ${user}!`)
         break
       }
-    } else {
+    }
+    else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${user}!`)
       break

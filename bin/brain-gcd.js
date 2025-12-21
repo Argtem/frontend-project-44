@@ -31,7 +31,8 @@ function gcd(user = sayYourName()) {
       if (correct === correctNeeded) {
         console.log(`Congratulations, ${user}!`)
       }
-    } else {
+    }
+    else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
       break
     }
