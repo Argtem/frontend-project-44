@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { sayYourName } from '../src/cli.js'
 
 
 function isPrime(num) {
@@ -14,7 +16,7 @@ function isPrime(num) {
 }
 
 
-function primeGame(user = undefined) {
+function primeGame(user = sayYourName()) {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     
     const correctNeeded = 3;
