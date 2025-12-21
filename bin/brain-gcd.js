@@ -23,7 +23,7 @@ function gcd(user = sayYourName()) {
         const b = Math.floor(Math.random() * 100)
         const correctAnswer = calculateGCD(a, b);
         console.log("Find the greatest common divisor of given numbers.")
-        const answer = readlineSync.question(`Question: ${a} ${b}\n`);
+        const answer = readlineSync.question(`Question: ${a} ${b}`);
         console.log(`Your answer: ${answer}`);
         if (Number(answer) == correctAnswer) {
             console.log("Correct!");
