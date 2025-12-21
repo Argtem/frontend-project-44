@@ -11,7 +11,7 @@ function evenGame(user= undefined) {
         const correctAnswer = isEven ? 'yes' : 'no';
         
         
-        const answer = readlineSync.question(`Is ${randomInt} even? Answer "yes" or "no": `).toLowerCase();
+        const answer = readlineSync.question(`Question: ${randomInt}`).toLowerCase();
         console.log(`Your answer: ${answer}`);
 
         if (answer === correctAnswer) {
