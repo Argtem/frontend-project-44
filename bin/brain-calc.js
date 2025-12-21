@@ -22,7 +22,7 @@ function calcGame(user = sayYourName()) {
                     console.log(`Congratulations, ${user}!`)
                 }
             } else {
-                console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again,${user}!`)
+                console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
                 break
             }
 
@@ -37,7 +37,7 @@ function calcGame(user = sayYourName()) {
                     console.log(`Congratulations, ${user}!`)
                 }
             } else {
-                console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again,${user}!`)
+                console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
                 break
             }
         } else if (sign == 3) {
