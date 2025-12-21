@@ -10,9 +10,10 @@ function calcGame(user = sayYourName()) {
         const a = Math.floor(Math.random() * 100)
         const b = Math.floor(Math.random() * 100)
         const sign = Math.floor(Math.random() * 3) + 1
+        console.log('What is the result of the expression?')
         if (sign == 1) {
             const correctAnswer = a + b
-            const answer = readlineSync.question(`What is ${a} + ${b} answer equals to? `);
+            const answer = readlineSync.question(`Question: ${a} + ${b} `);
             console.log(`Your answer: ${answer}`);
             if (Number(answer) === correctAnswer) {
                 console.log("Correct!");
