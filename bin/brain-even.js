@@ -1,34 +1,32 @@
 #!/usr/bin/env node
 import { sayYourName } from '../src/cli.js'
-import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync'
 
+function evenGame(user = sayYourName()) {
+  let correctAnswers = 0
+  const requiredCorrect = 3
 
-function evenGame(user= sayYourName()) {
-    let correctAnswers = 0;
-    const requiredCorrect = 3;
-    
-    while (correctAnswers < requiredCorrect) {
-        const randomInt = Math.floor(Math.random() * 100) + 1;
-        const isEven = randomInt % 2 === 0;
-        const correctAnswer = isEven ? 'yes' : 'no';
-        console.log('Answer "yes" if the number is even, otherwise answer "no".')
-        
-        
-        const answer = readlineSync.question(`Question: ${randomInt}`).toLowerCase();
-        console.log(`Your answer: ${answer}`);
+  while (correctAnswers < requiredCorrect) {
+    const randomInt = Math.floor(Math.random() * 100) + 1
+    const isEven = randomInt % 2 === 0
+    const correctAnswer = isEven ? 'yes' : 'no'
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
-        if (answer === correctAnswer) {
-            console.log("Correct!");
-            correctAnswers++;
-            if (correctAnswers == requiredCorrect) {
-                    console.log(`Congratulations, ${user}!`)
-                }
-        } else {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-            console.log(`Let's try again, ${user}!`);
-            break
-        }
+    const answer = readlineSync.question(`Question: ${randomInt}`).toLowerCase()
+    console.log(`Your answer: ${answer}`)
+
+    if (answer === correctAnswer) {
+      console.log('Correct!')
+      correctAnswers++
+      if (correctAnswers === requiredCorrect) {
+        console.log(`Congratulations, ${user}!`)
+      }
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`)
+      console.log(`Let's try again, ${user}!`)
+      break
     }
+  }
 }
 
 evenGame()

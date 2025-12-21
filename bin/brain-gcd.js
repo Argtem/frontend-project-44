@@ -1,41 +1,41 @@
 #!/usr/bin/env node
 import { sayYourName } from '../src/cli.js'
-import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync'
+
 function calculateGCD(a, b) {
-    a = Math.abs(a);
-    b = Math.abs(b);
+  a = Math.abs(a)
+  b = Math.abs(b)
 
-    while (b !== 0) {
-        const temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
+  while (b !== 0) {
+    const temp = b
+    b = a % b
+    a = temp
+  }
+  return a
 }
-
 
 function gcd(user = sayYourName()) {
-    const correctNeeded = 3
-    let correct = 0
+  const correctNeeded = 3
+  let correct = 0
 
-    while (correct != correctNeeded) {
-        const a = Math.floor(Math.random() * 100)
-        const b = Math.floor(Math.random() * 100)
-        const correctAnswer = calculateGCD(a, b);
-        console.log("Find the greatest common divisor of given numbers.")
-        const answer = readlineSync.question(`Question: ${a} ${b}`);
-        console.log(`Your answer: ${answer}`);
-        if (Number(answer) == correctAnswer) {
-            console.log("Correct!");
-            correct++;
-            if (correct == correctNeeded) {
-                console.log(`Congratulations, ${user}!`)
-            }
-        } else {
-            console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\n Let's try again, ${user}!`)
-            break
-        }
-
+  while (correct !== correctNeeded) {
+    const a = Math.floor(Math.random() * 100)
+    const b = Math.floor(Math.random() * 100)
+    const correctAnswer = calculateGCD(a, b)
+    console.log('Find the greatest common divisor of given numbers.')
+    const answer = readlineSync.question(`Question: ${a} ${b}`)
+    console.log(`Your answer: ${answer}`)
+    if (Number(answer) === correctAnswer) {
+      console.log('Correct!')
+      correct++
+      if (correct === correctNeeded) {
+        console.log(`Congratulations, ${user}!`)
+      }
+    } else {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`)
+      break
     }
+  }
 }
+
 gcd()
