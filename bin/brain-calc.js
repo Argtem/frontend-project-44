@@ -28,7 +28,7 @@ function calcGame(user = sayYourName()) {
 
         } else if (sign == 2) {
             const correctAnswer = a - b
-            const answer = readlineSync.question(`What is ${a} - ${b} answer equals to? `);
+            const answer = readlineSync.question(`Question: ${a} - ${b}`);
             console.log(`Your answer: ${answer}`);
             if (Number(answer) === correctAnswer) {
                 console.log("Correct!");
@@ -42,7 +42,7 @@ function calcGame(user = sayYourName()) {
             }
         } else if (sign == 3) {
             const correctAnswer = a * b
-            const answer = readlineSync.question(`What is ${a} * ${b} answer equals to? `);
+            const answer = readlineSync.question(`Question: ${a} * ${b}`);
             console.log(`Your answer: ${answer}`);
             if (Number(answer) === correctAnswer) {
                 console.log("Correct!");
