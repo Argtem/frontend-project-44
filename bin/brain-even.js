@@ -3,7 +3,7 @@ import { sayYourName } from '../src/cli.js'
 import readlineSync from 'readline-sync';
 
 
-function evenGame(user= sayYourName()) {
+function evenGame(user= undefined) {
     let correctAnswers = 0;
     const requiredCorrect = 3;
     
