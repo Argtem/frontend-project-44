@@ -38,4 +38,4 @@ function gcd(user = sayYourName()) {
 
     }
 }
-export {gcd};
+gcd()
