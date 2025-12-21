@@ -32,7 +32,7 @@ function gcd(user = sayYourName()) {
                 console.log(`Congratulations, ${user}!`)
             }
         } else {
-            console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\n let's try again ${user}`)
+            console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\n Let's try again, ${user}!`)
             break
         }
 
