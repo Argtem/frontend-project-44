@@ -11,6 +11,7 @@ function evenGame(user= sayYourName()) {
         const randomInt = Math.floor(Math.random() * 100) + 1;
         const isEven = randomInt % 2 === 0;
         const correctAnswer = isEven ? 'yes' : 'no';
+        console.log('Answer "yes" if the number is even, otherwise answer "no".')
         
         
         const answer = readlineSync.question(`Question: ${randomInt}`).toLowerCase();
