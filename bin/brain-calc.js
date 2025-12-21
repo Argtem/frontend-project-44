@@ -1,5 +1,9 @@
+#!/usr/bin/env node
+import { sayYourName } from '../src/cli.js'
+
+
 import readlineSync from 'readline-sync';
-function calcGame(user = undefined) {
+function calcGame(user = sayYourName()) {
     let correct = 0
     const need = 3
     while (correct < need) {
@@ -54,4 +58,4 @@ function calcGame(user = undefined) {
     }
 }
 
-export {calcGame}
+calcGame()
