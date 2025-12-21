@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+import { sayYourName } from '../src/cli.js'
 import readlineSync from 'readline-sync';
 
 
-function evenGame(user= undefined) {
+function evenGame(user= sayYourName()) {
     let correctAnswers = 0;
     const requiredCorrect = 3;
     
